@@ -3,8 +3,12 @@ import wtforms as forms
 
 class LoginForm(FlaskForm):
   username = forms.StringField('Username')
-  email = forms.EmailField('Email')
-  school = forms.StringField('School')
-  graded = forms.BooleanField('Đã tốt nghiệp hay chưa')
-  point = forms.FloatField('Diem')
-  date = forms.DateField('Thời gian vào trường')
+  password = forms.PasswordField('Password')
+  submit = forms.SubmitField('Login')
+
+
+class RegisterForm(FlaskForm):
+  username = forms.StringField('Username')
+  password = forms.PasswordField('Password')
+  confirm_password = forms.PasswordField('Confirm Password')
+  submit = forms.SubmitField('Register')
